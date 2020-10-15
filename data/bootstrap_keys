@@ -1,0 +1,5 @@
+traefik/http/middlewares/basic-auth/basicAuth/users/0 groot:$2y$05$kVHpotwICtu9upDLjL72qeeXWqcrKniq9LH0fgyd5zi2GI5hMUtMa
+traefik/http/routers/traefik/rule Host(`traefik.solublecode.local`)
+traefik/http/routers/traefik/entrypoints/0 web
+traefik/http/routers/traefik/service api@internal
+traefik/http/routers/traefik/middlewares/0 basic-auth
