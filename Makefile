@@ -9,5 +9,3 @@ build:
 push:
 	@echo "Push docker image";
 	@docker push ${IMG}:${IMG_TAG}
-proxy:
-	@ docker stack deploy -c docker-compose.yml noty
