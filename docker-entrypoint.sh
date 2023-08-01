@@ -22,7 +22,7 @@ bootstrap_data(){
   if [ -f /data/bootstrap_keys ]; then
     wait_for_redis
     add_bootstrap_keys
-    # rm_old_keys
+    rm_old_keys
     watch_configs
   fi
 }
@@ -38,7 +38,7 @@ watch_configs(){
   do
     if [ "$CONFIG_SIG" != `configs_sig` ]; then
       add_bootstrap_keys
-      # rm_old_keys
+      rm_old_keys
       CONFIG_SIG=`configs_sig`
     fi
   done

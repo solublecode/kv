@@ -1,4 +1,4 @@
-FROM redis:6.0
+FROM redis:latest
 
 COPY ./docker-entrypoint.sh /
 
